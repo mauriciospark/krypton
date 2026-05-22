@@ -1,0 +1,253 @@
+/*
+  ============================================================================
+  PROPRIETÁRIO: Mauricio Spark
+  MARCA: SparkMauricio
+  PROJETO: KRYPTON
+  VERSÃO: v1.0.0
+  LINHAGEM: SPARK
+  ============================================================================
+  Documento de Planejamento de Escopo
+  COPYRIGHT: © 2026 / Mauricio Spark. Todos os direitos reservados.
+  ============================================================================
+*/
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 25%, #0d1b2a 50%, #1b263b 75%, #0a192f 100%);
+  color: #fff;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 10px;
+  margin: 0;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 40px rgba(0, 212, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5), 0 0 60px rgba(0, 212, 255, 0.2);
+  transform: scale(1.05);
+}
+
+h2 {
+  margin: 10px 0 25px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #00d4ff, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5), 0 0 40px rgba(0, 212, 255, 0.3);
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 212, 255, 0.1);
+  padding: 30px;
+  width: 380px;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.result-container {
+  background: rgba(10, 15, 30, 0.8);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 16px 50px 16px 16px;
+  height: 60px;
+  width: 100%;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 50px);
+  overflow-y: scroll;
+  height: 100%;
+  color: #00d4ff;
+  font-weight: 500;
+}
+
+#result::-webkit-scrollbar {
+  width: 4px;
+}
+
+#result::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+#result::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 255, 0.3);
+  border-radius: 2px;
+}
+
+.result-container .btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.result-container .btn:hover {
+  color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.btn {
+  border: none;
+  background: linear-gradient(135deg, #0a192f 0%, #1a3a5c 100%);
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-large {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #0a192f 0%, #00d4ff 100%);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+}
+
+.btn-large:hover {
+  box-shadow: 0 6px 25px rgba(0, 212, 255, 0.5), 0 0 30px rgba(0, 212, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.setting label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+/* Custom Toggle Switch */
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 26px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background: linear-gradient(135deg, #00d4ff 0%, #00ff88 100%);
+  border-color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+  background-color: #fff;
+}
+
+/* Custom Number Input */
+#length {
+  background: rgba(10, 15, 30, 0.8);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 25px;
+  padding: 8px 16px;
+  color: #00d4ff;
+  font-size: 16px;
+  font-weight: 600;
+  width: 80px;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#length:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+#length::-webkit-inner-spin-button,
+#length::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.settings {
+  margin-top: 10px;
+}
